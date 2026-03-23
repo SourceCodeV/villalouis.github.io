@@ -1,0 +1,51 @@
+.info-content {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  
+  .info-text, .info-map {
+    flex: 1; /* Each takes up half the space */
+  }
+  
+  .info-text ul {
+    list-style-type: '☀️ '; /* Fun custom bullet point */
+    padding-left: 1.5rem;
+  }
+  
+  .info-text li {
+    padding-bottom: 0.5rem;
+  }
+  
+  .map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+  .info-map a {
+      display: block;
+      margin-top: 1rem;
+      text-align: center;
+  }
+  
+  
+  /* On smaller screens, stack the columns */
+  @media (max-width: 900px) {
+    .info-content {
+      flex-direction: column;
+    }
+  }
