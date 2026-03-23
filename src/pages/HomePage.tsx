@@ -5,12 +5,16 @@ export function HomePage() {
   return (
     <div className="home-page" style={{ backgroundImage: `url(${heroImage})` }}>
       <div className="hero-content">
-        <h1>Your Seaside Sanctuary Awaits</h1>
-        <p>Unwind, relax, and create memories by the shore.</p>
-        <a href="YOUR_RESERVATION_LINK_HERE" className="cta-button" target="_blank" rel="noopener noreferrer">
-          Book Your Stay
+        <h1>Eindelijk ruimte voor iedereen.</h1>
+        <p>Binnenkort: Vakantiewoning voor families en vriendgroepen tot 12 personen in Westende-Bad.</p>
+        <a href="https://www.facebook.com/people/Villa-Louis-Westende/61587574167665/" className="cta-button" target="_blank" rel="noopener noreferrer">
+          Facebook
+        </a>
+        <a href="https://www.instagram.com/villalouiswestende/" className="cta-button" target="_blank" rel="noopener noreferrer">
+          Instagram
         </a>
       </div>
     </div>
   );
 }
+
