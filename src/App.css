@@ -12,11 +12,12 @@
 .app-main {
   flex: 1;
   min-height: 0;
+  padding-bottom: var(--footer-height);
+  box-sizing: border-box;
 }
 
 @media (min-width: 769px) {
   .app-main.home-main {
-    height: calc(100dvh - var(--nav-height) - var(--footer-height));
     overflow: hidden;
   }
 }
