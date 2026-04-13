@@ -1,6 +1,6 @@
 import './HomePage.css'; // For styling
 import logo from '../assets/logos/Logo.webp';
-import homeFront from '../assets/images/home_front.jpg';
+import homeFront from '../assets/images/gallery/home_front.jpg';
 
 export function HomePage() {
   return (
