@@ -1,9 +1,12 @@
 :root {
-  --primary-color: #0077b6; /* Ocean Blue */
-  --secondary-color: #f3d5a5; /* Sandy Beige */
-  --text-color: #333;
-  --background-color: #fafafa;
-  --font-family: 'Montserrat', sans-serif; /* Add this font from Google Fonts */
+  --primary-color: #3e4a59;
+  --secondary-color: #bcc6c1;
+  --text-color: #3e4a59;
+  --background-color: #f9f9f7;
+  --font-family: 'Montserrat', sans-serif;
+  --nav-font-family: 'Tenor Sans', sans-serif;
+  --nav-height: 72px;
+  --footer-height: 110px;
 }
 
 body {
@@ -15,40 +18,34 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-main {
-  min-height: calc(100vh - 120px); /* Adjust based on nav/footer height */
-}
-
-.page-container {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 2rem;
-}
-
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--primary-color);
 }
 
 .cta-button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #005a8d;
+  background-color: #2f3945;
 }
 
-/* Basic responsiveness */
 @media (max-width: 768px) {
-  .navbar .nav-links {
-    display: none; /* In a real app, you'd add a hamburger menu here */
+  :root {
+    --nav-height: 58px;
+    --footer-height: 96px;
   }
-  .info-content, .contact-content {
+
+  .info-content,
+  .contact-content {
     flex-direction: column;
   }
 }

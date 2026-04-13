@@ -1,20 +1,21 @@
 import './HomePage.css'; // For styling
-import heroImage from '../assets/hero-background.jpeg'; 
+import logo from '../assets/logos/Logo.webp';
+import homeFront from '../assets/images/home_front.jpg';
 
 export function HomePage() {
   return (
-    <div className="home-page" style={{ backgroundImage: `url(${heroImage})` }}>
-      <div className="hero-content">
-        <h1>Eindelijk ruimte voor iedereen.</h1>
-        <p>Binnenkort: Vakantiewoning voor families en vriendgroepen tot 12 personen in Westende-Bad.</p>
-        <a href="https://www.facebook.com/people/Villa-Louis-Westende/61587574167665/" className="cta-button" target="_blank" rel="noopener noreferrer">
-          Facebook
-        </a>
-        <a href="https://www.instagram.com/villalouiswestende/" className="cta-button" target="_blank" rel="noopener noreferrer">
-          Instagram
-        </a>
+    <section className="home-page" aria-label="Villa Louis Westende homepage">
+      <div className="home-content">
+        <img className="home-logo" src={logo} alt="Villa Louis Westende logo" loading="eager" decoding="async" fetchPriority="high" />
+        <div className="home-image-frame">
+          <img className="home-front-image" src={homeFront} alt="Front view of Villa Louis in Westende" loading="eager" decoding="async" />
+        </div>
+        <div className="home-copy">
+          <h1>Eindelijk ruimte voor iedereen.</h1>
+          <p>Binnenkort: Vakantiewoning voor families en vriendengroepen tot 12 personen in Westende-Bad.</p>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

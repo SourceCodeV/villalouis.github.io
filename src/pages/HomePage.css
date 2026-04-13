@@ -1,52 +1,97 @@
 .home-page {
-    height: calc(100vh - 70px); /* Full viewport height minus navbar height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-  
-    /* Crucial for the background image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  padding: 0.2rem 1rem 5.2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.home-content {
+  width: min(1100px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.home-logo {
+  width: clamp(125px, 15vw, 200px);
+  height: auto;
+  display: block;
+}
+
+.home-image-frame {
+  border: 2px solid var(--primary-color);
+  padding: 1rem;
+  width: fit-content;
+  background-color: var(--background-color);
+}
+
+.home-front-image {
+  width: min(27vw, 340px);
+  min-width: 210px;
+  height: auto;
+  display: block;
+}
+
+.home-copy {
+  text-align: center;
+  max-width: 760px;
+  margin-top: 1.25rem;
+}
+
+.home-copy h1 {
+  font-family: var(--nav-font-family);
+  font-weight: 400;
+  margin: 0;
+  font-size: clamp(1.25rem, 2.1vw, 1.85rem);
+  color: var(--primary-color);
+}
+
+.home-copy p {
+  font-family: var(--font-family);
+  margin: 0.4rem 0 0;
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  line-height: 1.45;
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    min-height: auto;
+    height: auto;
+    padding: 1rem 1rem 2rem;
+    overflow: visible;
   }
-  
-  /* This pseudo-element adds a dark overlay so text is always readable */
-  .home-page::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+
+  .home-content {
+    gap: 1.1rem;
   }
-  
-  .hero-content {
-    position: relative; /* Sits on top of the overlay */
-    z-index: 1;
-    padding: 2rem;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+
+  .home-logo {
+    width: clamp(125px, 36vw, 190px);
   }
-  
-  .hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+
+  .home-image-frame {
+    width: min(90vw, 430px);
+    padding: 0.75rem;
   }
-  
-  .hero-content p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+
+  .home-front-image {
+    width: 100%;
+    min-width: 0;
   }
-  
-  @media (max-width: 768px) {
-    .hero-content h1 {
-      font-size: 2.5rem;
-    }
+
+  .home-copy {
+    margin-top: 1rem;
   }
+
+  .home-copy h1 {
+    font-size: 1.3rem;
+  }
+
+  .home-copy p {
+    font-size: 0.96rem;
+  }
+}

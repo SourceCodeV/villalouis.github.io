@@ -1,54 +1,55 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: rgba(255, 255, 255, 0.85); /* Slightly transparent */
-    backdrop-filter: blur(10px); /* Frosted glass effect */
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--nav-height);
+  box-sizing: border-box;
+  padding: 0 2rem;
+  background-color: var(--secondary-color);
+  border-bottom: 1px solid rgba(62, 74, 89, 0.25);
+}
+
+.nav-brand-spacer {
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.nav-links a {
+  font-family: var(--nav-font-family);
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.2rem;
+  transition: border-color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  border-bottom-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
   }
-  
-  .nav-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    text-decoration: none;
-  }
-  
-  .nav-links a {
-    margin-left: 1.5rem;
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    position: relative;
-    padding-bottom: 0.25rem;
-  }
-  
-  /* Underline effect on hover */
-  .nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
+
+  .nav-brand-spacer {
     width: 0;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: width 0.3s ease;
   }
-  
-  .nav-links a:hover::after {
-    width: 100%;
+
+  .nav-links {
+    justify-content: center;
+    gap: 1rem;
   }
-  
-  /* Style for the active link */
-  .nav-links a.active {
-    color: var(--primary-color);
-  }
-  
-  .nav-links a.active::after {
-    width: 100%;
-  }
+}
