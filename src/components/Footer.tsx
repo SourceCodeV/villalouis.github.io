@@ -7,9 +7,9 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="footer-pictograms" aria-label="Villa pictograms">
-        <img src={roomsIcon} alt="Accommodation capacity pictogram" />
-        <img src={bathIcon} alt="Bedrooms and bathrooms pictogram" />
-        <img src={seaIcon} alt="Sea distance pictogram" />
+        <img src={roomsIcon} alt="Aantal personen pictogram" />
+        <img src={bathIcon} alt="Aantal slaapkamers pictogram" />
+        <img src={seaIcon} alt="Zee afstand pictogram" />
       </div>
       <div className="footer-social" aria-label="Social media links">
         <a href="https://www.facebook.com/people/Villa-Louis-Westende/61587574167665/" 
