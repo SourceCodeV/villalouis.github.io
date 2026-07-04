@@ -1,15 +1,24 @@
 import './Footer.css'; // For styling
-import seaIcon from '../assets/pictogram/zee.png';
-import roomsIcon from '../assets/pictogram/accomodatie_nummer.png';
-import bathIcon from '../assets/pictogram/slaap_badkamers_nummer.png';
+import seaIcon from '../assets/pictogram/sea.png';
+import guestsIcon from '../assets/pictogram/guests.png';
+import bedroomsIcon from '../assets/pictogram/bedrooms.png';
 
 export function Footer() {
   return (
     <footer className="footer">
       <div className="footer-pictograms" aria-label="Villa pictograms">
-        <img src={roomsIcon} alt="Accommodation capacity pictogram" />
-        <img src={bathIcon} alt="Bedrooms and bathrooms pictogram" />
-        <img src={seaIcon} alt="Sea distance pictogram" />
+        <div className="footer-pictogram">
+          <img className="pictogram-guests" src={guestsIcon} alt="Ruime accommodatie voor 12 personen" />
+          <span className="footer-pictogram-caption">Ruime accommodatie voor 12 personen</span>
+        </div>
+        <div className="footer-pictogram">
+          <img className="pictogram-bedrooms" src={bedroomsIcon} alt="4 slaapkamers en 2 badkamers" />
+          <span className="footer-pictogram-caption">4 slaapkamers en 2 badkamers</span>
+        </div>
+        <div className="footer-pictogram">
+          <img className="pictogram-sea" src={seaIcon} alt="Op wandelafstand van het strand" />
+          <span className="footer-pictogram-caption">Op wandelafstand van het strand</span>
+        </div>
       </div>
       <div className="footer-social" aria-label="Social media links">
         <a href="https://www.facebook.com/people/Villa-Louis-Westende/61587574167665/" 

@@ -6,7 +6,7 @@
   --font-family: 'Montserrat', sans-serif;
   --nav-font-family: 'Tenor Sans', sans-serif;
   --nav-height: 72px;
-  --footer-height: 110px;
+  --footer-height: 180px;
 }
 
 body {
@@ -41,7 +41,7 @@ h3 {
 @media (max-width: 768px) {
   :root {
     --nav-height: 58px;
-    --footer-height: 96px;
+    --footer-height: 150px;
   }
 
   .info-content,
