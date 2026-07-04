@@ -82,6 +82,13 @@
 }
 
 @media (max-width: 768px) {
+  /* Let the document scroll so the sticky footer (App.css) can pin to the
+     bottom of the screen instead of floating under short gallery content. */
+  .gallery-page {
+    height: auto;
+    overflow: visible;
+  }
+
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;

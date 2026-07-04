@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="32" fill="#3e4a59"/>
+  <text x="32" y="29" text-anchor="middle" dominant-baseline="central"
+        font-family="'Tenor Sans', Georgia, 'Times New Roman', serif"
+        font-size="26" letter-spacing="1" fill="#ece3d4">VL</text>
+  <path d="M17 45 Q25 40 32 43 T47 44" stroke="#d9c9a8" stroke-width="2.5"
+        fill="none" stroke-linecap="round"/>
+</svg>
