@@ -23,9 +23,23 @@
 }
 
 @media (max-width: 768px) {
+  /* On mobile the whole document scrolls and the footer sits in normal
+     flow (see Footer.css), so nothing can be hidden behind a fixed bar. */
+  #root,
+  .app-shell {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+
+  .app-main {
+    flex: 0 0 auto;
+    padding-bottom: 0;
+  }
+
   .app-main.home-main {
     height: auto;
     min-height: 0;
-    overflow-y: auto;
+    overflow: visible;
   }
 }
